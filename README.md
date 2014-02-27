@@ -6,8 +6,8 @@
 
 ###Custom mediator object
 [Source](https://github.com/msemenistyi/event-driven-js-webinar/blob/master/custom-mediator.js)  
-The very simple mediator object implementation. Contains commentaries describing basics.  
-Lacks events unbinding, callback execution priorities, context passing.
+A very simple mediator object implementation. Contains commentaries describing basics.  
+Lacks events unbinding, callback execution priorities, context passing, once subscription.
 
 ###Modules worth looking at
 

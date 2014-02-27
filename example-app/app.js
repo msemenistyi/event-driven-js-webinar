@@ -1,0 +1,1 @@
+var boss = new Boss();
