@@ -1,3 +1,6 @@
+#Developers Hangout: JavaScript Events
+![Hangout](space.jpg)
+
 ###Example app with event-driven architecture
 [App folder](https://github.com/msemenistyi/event-driven-js-webinar/blob/master/example-app)
 
