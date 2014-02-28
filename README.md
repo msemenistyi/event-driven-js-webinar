@@ -2,7 +2,20 @@
 ![Hangout](space.jpg)
 
 ###Example app with event-driven architecture
-[App folder](https://github.com/msemenistyi/event-driven-js-webinar/blob/master/example-app)
+[App folder](https://github.com/msemenistyi/event-driven-js-webinar/blob/master/example-app)  
+Given code is written with help of basic classes from backbone.js framework.
+There are 2 main entities in the app: Boss and Employee. Boss has EmployeeCollection
+as a property stored. He has limited budget and he distributes it between his 
+Employees.
+
+Each time Employee has worked 50 times, he asks Boss if his salary may be increased.
+Boss checks if his budget is bigger than the salary Employee asks for and makes a
+decision.
+
+If Employee's salary reaches 800, he gets happy.
+
+*Note: the code in folder is not a working app but rather set of code snippets 
+showing certain concept* 
 
 ###Custom mediator object
 [Source](https://github.com/msemenistyi/event-driven-js-webinar/blob/master/custom-mediator.js)  

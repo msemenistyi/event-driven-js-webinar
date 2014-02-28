@@ -1,6 +1,6 @@
 var Boss = Backbone.Model.extend({
 	defaults: {
-		budget: 100000		
+		budget: 10000		
 	},
 
 	initialize: function(){
@@ -8,11 +8,13 @@ var Boss = Backbone.Model.extend({
 	},
 
 	increaseSalary: function(name, value){
-		if (budget > 0){
-			var employee = this.employees.findWhere({
-				name: name
-			});
-			employee.set('salary', employee.get('salary') + 50);
+		var employee = this.employees.findWhere({
+			name: name
+		});
+		var newSalary = employee.get('salary') + 50;
+		if (budget > newSalary){
+			employee.set('salary', newSalary);
+			this.set('budget', this.get('budget') - newSalary);
 		}
 	}
 });
