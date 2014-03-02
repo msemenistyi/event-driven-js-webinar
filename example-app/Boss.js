@@ -5,6 +5,7 @@ var Boss = Backbone.Model.extend({
 
 	initialize: function(){
 		this.employees = new EmployeeCollection();
+		this.view = new EmployeeCollectionView({collection: this.employees});
 	},
 
 	increaseSalary: function(name, value){

@@ -8,6 +8,7 @@ var EmployeeView = Backbone.View.extend({
 
 	render: function(){
 		this.$el.html(this.template(this.model.toJSON()));
+		return this;
 	},
 
 	hideTired: function(){
