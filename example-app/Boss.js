@@ -1,21 +1,30 @@
 var Boss = Backbone.Model.extend({
 	defaults: {
-		budget: 10000		
+		budget: 1000000
 	},
 
 	initialize: function(){
 		this.employees = new EmployeeCollection();
+		this.generateEmployees();
 		this.view = new EmployeeCollectionView({collection: this.employees});
+		this.view.render();
 	},
 
-	increaseSalary: function(name, value){
+	increaseSalary: function(number, value){
+		value = value || 50;
 		var employee = this.employees.findWhere({
-			name: name
+			number: number
 		});
-		var newSalary = employee.get('salary') + 50;
-		if (budget > newSalary){
+		var newSalary = employee.get('salary') + value;
+		if (this.get('budget') > newSalary){
 			employee.set('salary', newSalary);
 			this.set('budget', this.get('budget') - newSalary);
+		}
+	},
+
+	generateEmployees: function(){
+		for (var i = 1; i < 20; i++){
+			this.employees.add(new Employee({number: i}));
 		}
 	}
 });

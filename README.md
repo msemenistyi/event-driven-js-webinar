@@ -14,8 +14,9 @@ decision.
 
 If Employee's salary reaches 800, he gets happy.
 
-*Note: the code in folder is not a working app but rather set of code snippets 
-showing certain concept* 
+*Note: the code in app folder is not a working app but rather set of code snippets 
+showing certain concept. The structural code is placed 
+[here](https://github.com/msemenistyi/event-driven-js-webinar/blob/master/app-loader)* 
 
 ###Custom mediator object
 [Source](https://github.com/msemenistyi/event-driven-js-webinar/blob/master/custom-mediator.js)  

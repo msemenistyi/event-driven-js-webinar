@@ -3,13 +3,32 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Developers Hangout: example app</title>
+	<style>
+		.employee-number, .employee-mood, .employee-worked{
+			float: left;
+			margin-left: 10px;
+		}
+		.employee-mood{
+			color: red;
+		}
+
+		.employee-container{
+			clear: both;
+		}
+	</style>
 </head>
 <body>
 	<div id="employee-container"></div>
 
 
 	<!-- template -->
-	<script id="employee-template"></script>
+	<script class="employee-template" type="text/template">
+		<div class="employee-number"><%= number %></div>
+		<div class="employee-worked"><%= timesWorked %></div>
+		<% if (happy) { %>
+		<div class="employee-mood"> happy </div>
+		<% } %>
+	</script>
 
 	<!-- libs -->
 	<script src="libs/jquery.js"></script>
@@ -19,8 +38,10 @@
 	<!-- our scripts -->
 	<script src="../example-app/Boss.js"></script>
 	<script src="../example-app/Employee.js"></script>
-	<script src="../example-app/EmployeeCollection.js"></script>
 	<script src="../example-app/EmployeeView.js"></script>
-	<script src="../example-app/app.js"></script>
+
+	<script src="./app/EmployeeCollection.js"></script>
+	<script src="./app/EmployeeCollectionView.js"></script>
+	<script src="./app/app.js"></script>
 </body>
 </html>

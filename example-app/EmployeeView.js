@@ -1,9 +1,10 @@
 var EmployeeView = Backbone.View.extend({
-	template: _.template($('#employee-template').html())
+	template: _.template($('.employee-template').html()),
+	className: 'employee-container',
 
 	initialize: function(){
-		this.model.on('change:timesWorked', this.render);
-		this.listenTo(this.model, 'change:tired', this.render); //memory-safe event assignment
+		this.model.on('change:timesWorked', this.render, this);
+		this.listenTo(this.model, 'change:happy', this.render, this); //memory-safe event assignment
 	},
 
 	render: function(){
